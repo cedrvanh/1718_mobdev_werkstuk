@@ -13,6 +13,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+  margin-right: -($grid-gutter-width / 2);
+  margin-left: -($grid-gutter-width / 2);
 }
 
 @mixin fb-grid-column($size, $columns-amount: $grid-columns-amount) {
@@ -65,6 +67,7 @@
 
 @mixin make-fb-grid-columns($columns-amount: $grid-columns-amount, $gutter-width: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
   %grid-column {
+    box-sizing: border-box;
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -86,6 +89,7 @@
 
   @each $breakpoint-key, $breakpoint-val in $breakpoints {
     @media (min-width: $breakpoint-val) {
+      @include make-fb-grid-columns-for-breakpoint(0, 0, $columns-amount, $gutter-width);
       @include make-fb-grid-columns-for-breakpoint($breakpoint-key, $breakpoint-val, $columns-amount, $gutter-width);
       @include make-fb-grid-columns-offset-for-breakpoint($breakpoint-key, $breakpoint-val, $columns-amount, $gutter-width);
     }
