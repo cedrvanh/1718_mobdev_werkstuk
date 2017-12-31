@@ -1,0 +1,44 @@
+input,
+textarea {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin: 15px 0;
+  text-indent: 10px;
+  border: $primary-lighter solid 1px;
+  border-radius: 5px;
+  color: $text-default;
+  font-size: 16px;
+
+  &::placeholder {
+    color: $text-default;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px $pink;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 125px;
+}
+
+.input__container {
+  position: relative;
+
+  .input__icon {
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+
+    font-size: 18px;
+    color: red;
+  }
+
+}
+
+.studentInput {
+  display: none;
+}

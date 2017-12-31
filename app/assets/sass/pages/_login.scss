@@ -1,0 +1,80 @@
+.login-page {
+  width: 100%;
+  height: 100vh;
+
+  .wrapper {
+    position: relative;
+    padding: 1.25rem;
+    margin: 25px;
+    max-width: 600px;
+    transform: translateY(10%);
+
+    @include desktop-mini-to {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  }
+
+  .wrapper__register {
+    padding-bottom: 55px;
+  }
+
+  .login-bg {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    border-radius: 0 0 50px 50px;
+
+    @include linear-gradient(top, $primary, $pink);
+  }
+
+  a {
+    color: $primary;
+  }
+
+  .error {
+    color: red;
+  }
+}
+
+.account__btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  .active {
+    background: $primary;
+    color: white;
+  }
+}
+
+.btn_account {
+  display: block;
+  float: left;
+  width: 50%;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  color: $primary;
+  background: white;
+  border: 1px solid $primary-lighter;
+  outline: none;
+  cursor: pointer;
+
+  &:nth-child(1) {
+    border-radius: 0 0 0 15px;
+  }
+
+  &:nth-child(2) {
+    border-radius: 0 0 15px;
+  }
+
+  &:hover {
+    background: $primary;
+    color: white;
+  }
+}

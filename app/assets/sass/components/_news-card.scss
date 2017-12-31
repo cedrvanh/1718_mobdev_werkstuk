@@ -1,0 +1,24 @@
+.wrapper__news {
+  @include desktop-mini-to {
+    float: left;
+    width: 46.6%;
+    margin: 0.1%;
+  }
+}
+
+.article__news {
+  .thumbnail__news {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    max-height: 300px;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    text-align: justify;
+    margin: 10px 30px;
+  }
+}

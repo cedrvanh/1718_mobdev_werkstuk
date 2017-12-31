@@ -21,7 +21,7 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
 
     {{> includes/head-icons}}
-
+    <link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="all" href="{{#if pathToRoot}}{{pathToRoot}}{{/if}}assets/css/main.css">
 
     {{#> head-block}}
@@ -31,11 +31,55 @@
   </head>
   <body>
 
+    <a href="#" class="menu-toggle">
+      <span class="fa fa-bars"></span>
+    </a>
+
+    <div class="mobile-menu">
+      <script id="mobile-navigation" type="text/x-handlebars-template">
+      <ul>
+        {{#each navItems}}
+        <li><a href="{{navLink}}">{{navTitle}}</a></li>
+        {{/each}}
+        <li class="mobile-menu__logout"><a href="#">Login</a></li>
+      </ul>
+      <ul class="mobile-menu__social">
+        {{#each SocialItems}}
+        <li><a href="{{navLink}}" class="fa fa-{{socialName}}"></a></li>
+        {{/each}}
+      </ul>
+      </script>
+
+     <div class="desktop-navigation"></div>
+    <script id="desktop-navigation" type="text/x-handlebars-template">
+      <ul>
+        {{#each userControl}}
+        <a href="{{navLink}}"><li class="nav__user-functions"><img src="assets/images/nav/pink/{{navIcon}}"/></li></a>
+        {{/each}}
+
+        {{#each navItems}}
+        <a href="{{navLink}}">
+            <li class="menu {{separatorClass}}">
+                <img src="assets/images/nav/white/{{navIcon}}"/>
+            </li>
+            <p class="menu-item {{separatorClass}}">{{navTitle}}</p>
+        </a>
+        {{/each}}
+
+        {{#each SocialItems}}
+        <a href="{{navLink}}"><li class="social {{separatorClass}}"><img src="assets/images/nav/pink{{socialName}}"/></li></a>
+        {{/each}}
+      </ul>
+    </script>
+
     {{#> content-block}}
       {{!-- Content for the page goes here. --}}
     {{/content-block}}
 
+    {{> includes/footer}}
+
     <!-- build:js assets/js/main.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="{{#if pathToRoot}}{{pathToRoot}}{{/if}}assets/js/main.js"></script>
     <!-- endbuild -->
 

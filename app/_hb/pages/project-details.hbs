@@ -1,0 +1,54 @@
+{{!-- pages/project-details.hbs --}}
+
+{{#> layouts/standalone title="Login | New Media Development | Artevelde University College Ghent" pathToRoot="./" }}
+
+  {{#*inline "head-block"}}
+  {{/inline}}
+
+  {{#*inline "content-block"}}
+    <div class="fb-grid__container main">
+        <div class="fb-grid__row">
+            <div class="fb-grid__col-12">
+                <div class="project-details">
+                    <h1 class="center">The Sweet Tooth</h1>
+                    {{> includes/tags }}
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <img class="wide" src="http://lorempixel.com/600/400">
+    <div class="fb-grid__container">
+        <div class="fb-grid__row">
+            <div class="fb-grid__col-12">
+                <div class="project-details">
+                    <h1 class="center">Opdract</h1>
+                    <p class="center">Bedenk, ontwerp en programmeer 
+                    een elektronisch stemsysteem voor 
+                    verkiezingen en referenda dat 
+                    bestaat uit een Mobile Web App, 
+                    een API en een Backoffice en 
+                    rekening houdt met authenticatie, 
+                    privacy, beveiliging en integriteit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="wide" src="http://lorempixel.com/600/400/city">
+    <div class="fb-grid__container">
+        <div class="fb-grid__row">
+            <div class="fb-grid__col-12">
+                <figcaption>
+                    <p class="center">Een mockup van de Sweet Tooth foodtruck. Hiermee geef je de klant al een hele goede indruk van hoe de uiteindelijke truck er zal uitzien. </p>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+    {{> includes/footer-social }}
+  {{/inline}}
+
+  {{#*inline "scripts-block"}}
+  {{/inline}}
+
+{{/layouts/standalone}}

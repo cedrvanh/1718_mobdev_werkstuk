@@ -1,0 +1,41 @@
+{{!-- 
+   includes/register-form.hbs
+
+   SEO
+   title  : Most important SEO tag
+   description
+   keywords
+   author
+   copyright
+--}}
+<h1 class="text--bold text--primary">Registreren</h1>
+<p>Als een normaal gebruiker</p>
+<form>
+    <div class="input__container">
+        <input type="text" placeholder="Voer je gebruikersnaam in" id="username">
+        <span class="error" id="usernameError"></span>
+    </div>
+    <div class="input__container">
+        <input type="email" placeholder="Voer je e-mail in" id="email">
+        <span class="error" id="emailError"></span>
+    </div>
+    <div class="input__container studentInput">
+        <input type="number" placeholder="Voer je studentennummer in" id="studentNr">
+        <span class="error" id="studentNrError"></span>
+    </div>
+    <div class="input__container">
+        <input type="password" placeholder="Voer je wachtwoord in" id="password">
+        <span class="error" id="passwordError"></span>
+    </div>
+    <div class="input__container">
+        <input type="password" placeholder="Bevestig je wachtwoord" id="passwordRepeat">
+        <span class="error" id="passwordRepeatError"></span>
+    </div>
+    <button type="button" class="margin btn wide" id="registerBtn">Registreren</button>
+    <p class="center">Al een account? <span><a href="#">Log dan in!</a></span></p>
+</form>
+
+<div class="account__btn">
+    <button type="button" class="btn_account active">Normaal</button>
+    <button type="button" class="btn_account" id="inputOptional">School</button>
+</div>

@@ -1,0 +1,54 @@
+{
+    "userControl": [
+    {
+        "navLink": "login.html",
+        "navIcon": "user.svg"
+    }],
+
+    "navItems": [
+    {
+        "navLink": "index.html",
+        "navIcon": "home.svg",
+        "navTitle": "Home",
+        "separatorClass": "sep first"
+    },
+    {
+        "navLink": "projects.html",
+        "navIcon": "users.svg",
+        "navTitle": "Works",
+        "separatorClass": "rest"
+    },
+    {
+        "navLink": "news.html",
+        "navIcon": "world.svg",
+        "navTitle": "Blog",
+        "separatorClass": "rest"
+    },
+    {
+        "navLink": "contact.html",
+        "navIcon": "contact.svg",
+        "navTitle": "Contact",
+        "separatorClass": "rest"
+    }],
+
+
+    "socialItems": [
+    {
+        "socialName": "facebook",
+        "navLink": "https://www.facebook.com/",
+        "navIcon": "facebook.svg",
+        "separatorClass": "sep"
+    },
+    {
+        "socialName": "twitter",
+        "navLink": "#",
+        "navIcon": "twitter.svg",
+        "separatorClass": ""
+    },
+    {
+        "socialName": "instagram",
+        "navLink": "#",
+        "navIcon": "instagram.svg",
+        "separatorClass": ""
+    }]
+}

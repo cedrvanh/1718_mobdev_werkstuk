@@ -8,8 +8,7 @@
 
 @mixin fb-grid-row() {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
@@ -43,26 +42,24 @@
 }
 
 @mixin make-fb-grid-columns-for-breakpoint($breakpoint-key, $breakpoint-val, $columns-amount: $grid-columns-amount, $gutter-width: $grid-gutter-width) {
-  $breakpoint-key-fix: if($breakpoint-key != 0, '-#{$breakpoint-key}', ''); 
+  $breakpoint-key-fix: if($breakpoint-key != 0, '-#{$breakpoint-key}', '');
 
   @for $i from 1 through $columns-amount {
-    #{grid-selector('column')}#{$breakpoint-key-fix}-#{$i} { 
+    #{grid-selector('column')}#{$breakpoint-key-fix}-#{$i} {
       flex-basis: #{($i/$columns-amount)*100%};
       max-width: #{($i/$columns-amount)*100%};
-    }       
+    }
   }
-
 }
 
 @mixin make-fb-grid-columns-offset-for-breakpoint($breakpoint-key, $breakpoint-val, $columns-amount: $grid-columns-amount, $gutter-width: $grid-gutter-width) {
-  $breakpoint-key-fix: if($breakpoint-key != 0, '-#{$breakpoint-key}', ''); 
+  $breakpoint-key-fix: if($breakpoint-key != 0, '-#{$breakpoint-key}', '');
 
   @for $i from 1 through $columns-amount {
-    #{grid-selector('offset')}#{$breakpoint-key-fix}-#{$i} { 
+    #{grid-selector('offset')}#{$breakpoint-key-fix}-#{$i} {
       margin-left: #{($i/$columns-amount)*100%};
-    }       
+    }
   }
-
 }
 
 @mixin make-fb-grid-columns($columns-amount: $grid-columns-amount, $gutter-width: $grid-gutter-width, $breakpoints: $grid-breakpoints) {

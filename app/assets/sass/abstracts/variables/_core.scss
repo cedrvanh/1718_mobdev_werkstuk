@@ -32,13 +32,13 @@ $base-font-weight: 400;
 /// @group abstracts
 /// @access public
 /// @type Number
-$headings-font-family: 'Open Sans', sans-serif;
+$headings-font-family: 'Segoe UI', sans-serif;
 
 /// Headings font weight
 /// @group abstracts
 /// @access public
 /// @type Number
-$headings-font-weight: 400;
+$headings-font-weight: 500;
 
 /// Modular Scale Ratios
 /// @group abstracts
@@ -139,3 +139,11 @@ $line-heights: (
   12: $base-line-height * 2,
   13: $base-line-height * 2,
 );
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-mini-width: 1024px;
+$desktop-medium-width: 1280px;
+$desktop-medium2-width: 1440px;
+$desktop-high-width: 1600px;
+$desktop-full-width: 1920px;

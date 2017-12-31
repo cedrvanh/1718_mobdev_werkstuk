@@ -1,0 +1,29 @@
+{{!-- 
+   includes/contact-form.hbs
+
+   SEO
+   title  : Most important SEO tag
+   description
+   keywords
+   author
+   copyright
+--}}
+<form>
+    <div class="input__container">
+        <input type="text" placeholder="Voer je volledige naam in">
+        <i class="input__icon fa fa-times" aria-hidden="true"></i>
+        <span class="error" id="usernameError"></span>
+    </div>
+    <div class="input__container">
+        <input type="email" placeholder="Voer je e-mail in">
+        <i class="input__icon fa fa-times" aria-hidden="true"></i>
+        <span class="error" id="emailError"></span>
+    </div>
+    <div class="input__container">
+        <input type="text" placeholder="Geef een onderwerp op">
+        <i class="input__icon fa fa-times" aria-hidden="true"></i>
+        <span class="error" id="usernameError"></span>
+    </div>
+    <textarea placeholder="Geef je bericht in" row="50" col="50"></textarea>
+    <button class="margin btn btn--small">Versturen</button>
+</form>

@@ -1,0 +1,77 @@
+body {
+    overflow-x: hidden;
+}
+
+.mobile-menu {
+    box-shadow: inset -7px 0 9px -7px $primary;
+    transition: all .5s ease;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+
+    & ul {
+        list-style: none;
+    }
+
+    & li {
+        width: 200px;
+    }
+    
+    & a {
+        display: block;
+        padding: 1rem;
+        color: $primary;
+    }
+
+    & a:hover {
+        color: $pink;
+    }
+
+    &__logout {
+        margin-top: 20px;
+    }
+    
+    &__social {
+        position: absolute;
+        bottom: 15px;
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        padding: 0;
+
+        li {
+            width: 50px;
+            font-size: 20px;
+        }
+    }
+
+    @include desktop-mini-to {
+        display: none;
+      }
+}
+
+.main {
+    transition: all .5s ease;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-toggle {
+    transition: all .5s ease;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 91;
+    -webkit-backface-visibility: hidden;
+
+    @include desktop-mini-to {
+      display: none;
+    }
+}

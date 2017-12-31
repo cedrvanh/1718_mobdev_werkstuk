@@ -1,0 +1,40 @@
+//
+//  Button Styles
+//
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  height: 50px;
+  border-radius: 30px;
+  display: inline-block;
+  line-height: 50px;
+  position: relative;
+  overflow: hidden;
+  outline: 0;
+  font-size: 17px;
+  padding: 0 20px;
+  box-shadow: 0 3px 2px rgba(252, 158, 206, 0.4);
+  background-size: 200% auto;
+
+  @include linear-gradient(bottom,#FBCACB, #FC9ECE);
+  
+  &:hover {
+    background-position: bottom center;
+    transition: all .4s ease-in-out;
+  }
+
+  &.wide {
+    width: 100%;
+  }
+
+  .btn--small {
+    padding: 0 10px;
+    color: red;
+    font-size: 30px;
+  }
+  
+  
+}

@@ -1,0 +1,27 @@
+{{!-- pages/login.hbs --}}
+
+{{#> layouts/standalone title="Login | New Media Development | Artevelde University College Ghent" pathToRoot="./" }}
+
+  {{#*inline "head-block"}}
+  <link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  {{/inline}}
+
+  {{#*inline "content-block"}}
+    <div class="login-page main">
+      <div class="login-bg"></div>
+      <div class="fb-grid__container">
+        <div class="fb-grid__row">
+          <div class="fb-grid__col-12">
+            <div class="wrapper__register wrapper">
+              {{> includes/register-form }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/inline}}
+
+  {{#*inline "scripts-block"}}
+  {{/inline}}
+
+{{/layouts/standalone}}

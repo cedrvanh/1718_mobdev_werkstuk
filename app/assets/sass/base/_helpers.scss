@@ -1,0 +1,33 @@
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.center {
+  text-align: center;
+}
+
+.padding {
+  padding: 50px 0;
+}
+
+.margin {
+  margin: 50px 0;
+}
+
+.text--primary {
+  color: $primary;
+}
+
+.text--pink {
+  color: $pink;
+}
+
+.text--bold {
+  font-weight: bold;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}

@@ -10,12 +10,33 @@
 // 2. Base
 @import
   'base/core',
-  'base/typography';
+  'base/typography',
+  'base/helpers';
 
 // 3. Layout
 @import
-  'layout/grid';
+  'layout/header',
+  'layout/grid',
+  'layout/background',
+  'layout/shapes',
+  'layout/footer';
 
-// 4. Components
+// 4. Pages
 @import
-  'components/gridoverlay';
+  'pages/index',
+  'pages/login',
+  'pages/project-details',
+  'pages/contact';
+
+// 5. Components
+@import
+  'components/gridoverlay',
+  'components/button',
+  'components/form',
+  'components/tag',
+  'components/profile-card',
+  'components/news-card',
+  'components/mobile-nav',
+  'components/desktop-nav',
+  'components/map',
+  'components/project-card';

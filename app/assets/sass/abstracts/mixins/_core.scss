@@ -2,3 +2,75 @@
   font-size: modular-scale($level);
   line-height: line-height($level);
 }
+
+@mixin linear-gradient($direction, $primaryColor, $secondaryColor) {
+  background: $direction;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to $direction, $primaryColor, $secondaryColor); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to $direction, $primaryColor, $secondaryColor); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{tablet-width -1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-mini-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-mini {
+  @media (min-width: #{$desktop-mini-width}) and (max-width: #{$desktop-medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-medium {
+  @media (min-width: #{$desktop-medium-width}) and (max-width: #{$desktop-medium2-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-medium2 {
+  @media (min-width: #{$desktop-medium2-width}) and (max-width: #{$desktop-high-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-high {
+  @media (min-width: #{$desktop-high-width}) and (max-width: #{$desktop-full-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-full {
+  @media (min-width: #{$desktop-full-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-mini-to {
+  @media (min-width: #{$desktop-mini-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-medium2-to {
+  @media (min-width: #{$desktop-medium2-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-tab-med2 {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-medium2-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-mob-mini {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-mini-width - 1px}) {
+    @content;
+  }
+}

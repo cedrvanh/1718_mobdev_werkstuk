@@ -34,12 +34,33 @@
     <meta name="apple-mobile-web-app-title" content="GDM">
     <meta name="application-name" content="GDM">
     <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">    <link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="all" href="../assets/css/main.css">
 
 
   </head>
   <body>
+
+    <a href="#" class="menu-toggle">
+      <span class="fa fa-bars"></span>
+    </a>
+
+    <div class="mobile-menu">
+      <script id="mobile-navigation" type="text/x-handlebars-template">
+      <ul>
+        <li class="mobile-menu__logout"><a href="#">Login</a></li>
+      </ul>
+      <ul class="mobile-menu__social">
+      </ul>
+      </script>
+
+     <div class="desktop-navigation"></div>
+    <script id="desktop-navigation" type="text/x-handlebars-template">
+      <ul>
+
+
+      </ul>
+    </script>
 
     <div class="fb-grid__container dev">
       <div class="fb-grid__row">
@@ -95,7 +116,11 @@
         </div>
     </div>
 
+    <div class="footer center">
+        <h2 class="footer__title">Echtegentenaarlaan 1<br>9000 Gent<br>België<br><br>0474 58 78 96</h2>
+    </div>
     <!-- build:js assets/js/main.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="../assets/js/main.js"></script>
     <!-- endbuild -->
 
