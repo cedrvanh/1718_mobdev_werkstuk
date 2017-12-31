@@ -1161,6 +1161,8 @@ App = function () {
       _ApplicationDbContext.init('account');
       loadData.init();
 
+      var url = window.location.href;
+
       this.nav();
 
       if (url.indexOf("login") > -1) {

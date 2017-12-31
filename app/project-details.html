@@ -82,19 +82,56 @@
     </script>
 
     <div class="fb-grid__container main">
-        <h1 class="center">Nieuws</h1>
-        <div class="wrapper_of__wrapper"></div>
-        <script id="latest-news" type="text/x-handlebars-template">
-            {{#each posts}}
-            <div class="wrapper wrapper__article">
-            <a href="news-details.html?id={{id}}" class="article__news">
-                <img class="thumbnail__news" src="{{thumbnail_url}}">
-                <h2 class="center">{{title}}</h2>
-                <p>{{description}}</p>
-            </a>
+        <h1 class="center">Project details</h1>
+        <div class="project__details-container"></div>
+        <script id="project__details" type="text/x-handlebars-template">
+    <div class="fb-grid__container">
+        <div class="fb-grid__row">
+            <div class="fb-grid__col-12">
+                <div class="profile-info clearfix">
+                    {{#each students}}
+                    <div class="profile-info__text">
+                        <p class="text--pink text--bold">{{name}}</p>
+                        <p>{{specialization}} - {{option}}, {{year}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="project-details">
+                    <h1 class="center">{{title}}</h1>
+                    <div class="tags">
+                        {{#each tags}}
+                        <div class="tag__single">
+                            <p class="tag__name">{{name}}</p>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
             </div>
-            {{/each}}
-        </script>
+        </div>
+    </div>
+    <div class="fb-grid__container">
+        <div class="fb-grid__row">
+            <div class="fb-grid__col-12">
+                <div class="project-details">
+                    <h1 class="center">Opdracht</h1>
+                    <p class="center">{{description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#each media}}
+    <img class="wide" src="{{url}}">
+    <div class="fb-grid__container">
+        <div class="fb-grid__row">
+            <div class="fb-grid__col-12">
+                <figcaption>
+                    <p class="center">{{description}}</p>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
         <div class="clearfix"></div>
     </div>
 
